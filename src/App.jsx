@@ -111,10 +111,6 @@ export default function App() {
             </button>
           </nav>
         </div>
-        
-        <p className="text-[10px] font-bold text-slate-400 text-center uppercase tracking-widest border-t border-slate-100 pt-4">
-          v1.3.0 • Estable
-        </p>
       </aside>
 
       {/* CONTENEDOR PRINCIPAL */}
