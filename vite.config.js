@@ -7,12 +7,20 @@ export default defineConfig({
   server: {
     port: 3000,
     strictPort: true,
-    // Forzamos a Vite a escuchar en la IP local pura en lugar de 'localhost'
-    host: '127.0.0.1', 
+    // Permite que Vite se conecte a la red local de manera más estable
+    host: true, 
     watch: {
+      // El modo polling es más lento pero necesario para carpetas con sincronización (OneDrive/Dropbox)
       usePolling: true,
-      interval: 100,
-      binaryInterval: 300
+      // Intervalos ajustados para no saturar el procesador pero mantener buena respuesta
+      interval: 500,
+      binaryInterval: 1000,
+      // Importante: ignorar node_modules evita que Vite vigile miles de archivos innecesarios
+      ignored: [
+        '**/node_modules/**', 
+        '**/dist/**', 
+        '**/build/**'
+      ]
     },
   },
 })
