@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { VentasView } from './components/VentasView';
-import { ProductosView } from './components/ProductosView';
-import { InventarioView } from './components/InventarioView';
-import { HistorialView } from './components/HistorialView';
-import { ReportesView } from './components/ReportesView';
+import { VentasView } from './Components/VentasView';
+import { ProductosView } from './Components/ProductosView';
+import { InventarioView } from './Components/InventarioView';
+import { HistorialView } from './Components/HistorialView';
+import { ReportesView } from './Components/ReportesView';
 import { ShoppingBag, Package, History, Boxes, Store, User, PieChart } from 'lucide-react';
-import { PRODUCTOS_BASE } from './constants/productos.js';
+import { PRODUCTOS_BASE } from './Constants/productos.js';
 
 export default function App() {
   const [vistaActiva, setVistaActiva] = useState('ventas');
